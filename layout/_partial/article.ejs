@@ -33,6 +33,7 @@
       <% } %>
     </div>
     <footer class="article-footer">
+      <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link"><%= __('share') %></a>
 	  <% if ((page.layout == 'post'|| page.layout == 'page') && theme.baidushare){ %>
 	  <!-- 百度分享 Start -->
 	  <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
@@ -40,7 +41,7 @@
 	  <% } else { %>
 	  <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" data_title="<%- post.title %>" data_summary="<%- truncate(strip_html(post.content), 160) %>" class="article-share-link">Share</a>
       <% if (post.comments && config.disqus_shortname){ %>
-        <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link"><%= __('comment') %></a>
       <% } %>
 
       <% if (post.comments && theme.duoshuo_shortname){ %>
