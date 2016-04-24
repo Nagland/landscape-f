@@ -70,3 +70,6 @@ about_me:
 
 # display updated
 display_updated: true
+
+# 不蒜子
+busuanzi: true
