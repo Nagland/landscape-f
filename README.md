@@ -10,6 +10,7 @@ A theme based on [Hexo]'s default theme [Landscape].
 ### Install
 
 ``` bash
+$ cd <your blog path>
 $ git clone https://github.com/howiefh/hexo-theme-landscape-f.git themes/landscape-f
 ```
 
@@ -18,6 +19,10 @@ $ git clone https://github.com/howiefh/hexo-theme-landscape-f.git themes/landsca
 ### Enable
 
 Modify `theme` setting in `_config.yml` to `landscape-f`.
+
+```
+theme: landscape-f
+```
 
 ### Update
 
@@ -135,7 +140,7 @@ Landscape-F provides 9 built-in widgets:
 - archive
 - recent_posts
 - about_me
-- calendar
+- calendar: Dates appear links if there are posts for that day when use [hexo-generator-calendar].
 - duoshuo_recent_comments
 - links
 
@@ -160,3 +165,4 @@ All of them are enabled by default. You can edit them in `widget` setting.
 [Font Awesome]: http://fontawesome.io/
 [Grunt]: http://gruntjs.com/
 [Landscape]: https://github.com/hexojs/hexo-theme-landscape
+[hexo-generator-calendar]: https://github.com/howiefh/hexo-generator-calendar
