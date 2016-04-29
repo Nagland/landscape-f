@@ -23,10 +23,10 @@
 	ds.type = 'text/javascript';ds.async = true;
 	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
 	ds.charset = 'UTF-8';
-	(document.getElementsByTagName('head')[0] 
+	(document.getElementsByTagName('head')[0]
 		|| document.getElementsByTagName('body')[0]).appendChild(ds);
   })();
-</script> 
+</script>
 <!-- 多说公共JS代码 end -->
 <% } %>
 
@@ -48,3 +48,12 @@
 <%- js('js/script') %>
 <%- partial('google-analytics') %>
 <%- partial('gauges-analytics') %>
+
+<% if (theme.widgets.indexOf('calendar') != -1){ %>
+    <%- js('js/languages') %>
+    <%- js('js/calendar') %>
+
+    <script type="text/javascript">
+    $('#calendar').aCalendar();
+    </script>
+<% } %>
