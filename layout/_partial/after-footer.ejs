@@ -54,6 +54,6 @@
     <%- js('js/calendar') %>
 
     <script type="text/javascript">
-    $('#calendar').aCalendar();
+    $('#calendar').aCalendar('<%= config.language %>', {single:<%= config.calendar.single %>, root:'<%= config.calendar.root %>'});
     </script>
 <% } %>

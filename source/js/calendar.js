@@ -237,7 +237,7 @@
       if (current.posts.length === 0) {
         cTitle.html(simpleDateFormat(curDate, settings.titleFormat));
       } else {
-        cTitleLink = $('<a/>').attr('href', '/archives' + simpleDateFormat(curDate, settings.titleLinkFormat))
+        cTitleLink = $('<a/>').attr('href', simpleDateFormat(curDate, settings.titleLinkFormat))
           .attr('title', simpleDateFormat(curDate, settings.postsMonthTip))
           .html(simpleDateFormat(curDate, settings.titleFormat));
         cTitle.html(cTitleLink);
@@ -367,7 +367,7 @@
     dayOfWeek: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
     postsMonthTip: 'Posts published on cMM yyyy',
     titleFormat: 'yyyy cMM',
-    titleLinkFormat: '/yyyy/MM/',
+    titleLinkFormat: '/archives/yyyy/MM/',
     headArrows: {previous: '<span class="cal-prev"></span>', next: '<span class="cal-next"></span>'},
     footArrows: {previous: '« ', next: ' »'},
     weekOffset: 0,
