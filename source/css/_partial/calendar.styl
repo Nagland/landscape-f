@@ -1,3 +1,7 @@
+#calendar
+  a
+    text-decoration none
+
 .cal-head
   position relative
   height 20px
@@ -10,9 +14,7 @@
   height 10px
   padding 3px 4px
   border 1px solid transparent
-  border-radius 2px
   color #333
-  text-decoration none
   outline 0
 
 .cal-prev
@@ -33,10 +35,6 @@
   border-top 5px solid transparent
   border-bottom 5px solid transparent
 
-.cal-prev:hover,.cal-next:hover
-  border 1px solid color-calendar-hover-border
-  background color-calendar-hover-bg
-
 .cal-title
   width 120px
   margin 0 auto
@@ -45,53 +43,56 @@
   text-align center
   a
     border 1px solid transparent
-    border-radius 2px
-    text-decoration none
     color color-theme
-    &:hover
-      border-color color-calendar-hover-border
-      background color-calendar-hover-bg
+
+.cal,
+.cal th,
+.cal td
+  border 1px solid color-calendar-border
 
 .cal
+  border-collapse separate
+  border-spacing 0
+  border-width 1px 0 0 1px
+  table-layout fixed
   width 100%
-  text-shadow none
-  border-spacing 1px
+  margin 0
   th
     background color-theme
     color #fff
-    padding 2px
-    border 1px solid color-theme
+    border-width 0 1px 1px 0
+    font-weight 700
   td
-    border 1px solid #ccc
-    text-align center
-  .cal-today
-    background color-theme
-    color #fff
+    border-width 0 1px 1px 0
+  tbody
+    a
+      background-color color-calendar-post-bg
+      color #fff
+      display block
+      font-weight 700
+    .cal-today
+      background-color color-theme
+      color #fff
   .cal-gray
     color #ddd
-  a
-    color color-theme
-    text-decoration none
-  .cal-post
-    &:hover
-      background-color color-calendar-hover-border
-      border-color color-calendar-hover-bg
-    &:after
-      background color-theme
-      border-radius 50%
-      display block
-      content ''
-      height 5px
-      left 50%
-      margin -2px 0 0 -2px
-      position relative
-      width 5px
 
-.cal,.cal th
+.cal th,
+.cal td
+  font-weight normal
+  line-height 2.5625
+  padding 0
   text-align center
 
-.cal-foot
-  &:hover
-    border 1px solid color-calendar-hover-border
-    background color-calendar-hover-bg
-    cursor pointer
+.cal .cal-foot
+  color color-theme
+
+.cal-title a:hover,
+.cal-prev:hover,
+.cal-next:hover,
+.cal .cal-foot:hover,
+.cal .cal-foot:focus,
+.cal tbody a:hover,
+.cal tbody a:focus
+  background-color color-calendar-hover-bg
+  color #fff
+  cursor pointer

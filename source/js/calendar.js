@@ -196,7 +196,7 @@
      */
     function simpleDateFormat(date, fmt) {
       var o = {
-        'cMM+': settings.months[date.getMonth()],
+        'LMM+': settings.months[date.getMonth()],
         'MM+': date.getMonth() + 1
       };
 
@@ -206,7 +206,7 @@
 
       for (var k in o) {
         if (new RegExp('(' + k + ')').test(fmt)) {
-          fmt = fmt.replace(RegExp.$1, (k === 'cMM+') ? (o[k]) : (('00' + o[k]).substr(('' + o[k]).length)));
+          fmt = fmt.replace(RegExp.$1, (k === 'LMM+') ? (o[k]) : (('00' + o[k]).substr(('' + o[k]).length)));
         }
       }
 
@@ -365,8 +365,8 @@
     months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
     dayOfWeekShort: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
     dayOfWeek: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-    postsMonthTip: 'Posts published on cMM yyyy',
-    titleFormat: 'yyyy cMM',
+    postsMonthTip: 'Posts published in LMM yyyy',
+    titleFormat: 'yyyy LMM',
     titleLinkFormat: '/archives/yyyy/MM/',
     headArrows: {previous: '<span class="cal-prev"></span>', next: '<span class="cal-next"></span>'},
     footArrows: {previous: '« ', next: ' »'},

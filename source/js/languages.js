@@ -79,8 +79,8 @@ var calLanguages = {
       'S', 'M', 'T', 'W', 'T', 'F', 'S'
     ],
     dayOfWeek: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-    postsMonthTip: 'Posts published on cMM yyyy',
-    titleFormat: 'cMM yyyy'
+    postsMonthTip: 'Posts published in LMM yyyy',
+    titleFormat: 'LMM yyyy'
   },
   el: { // Ελληνικά
     months: [
