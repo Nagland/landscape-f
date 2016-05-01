@@ -73,3 +73,7 @@ display_updated: true
 
 # 不蒜子
 busuanzi: true
+
+# calendar
+calendar:
+  language: zh-CN

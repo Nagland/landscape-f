@@ -95,6 +95,26 @@ about_me:
 
 # display updated
 display_updated: true
+
+# busuanzi
+busuanzi: true
+
+# calendar
+calendar:
+  language: zh-CN
+  options:
+    months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+    dayOfWeekShort: ['S', 'M', 'T', 'W', 'T', 'F', 'S']
+    dayOfWeek: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+    postsMonthTip: 'Posts published in LMM yyyy'
+    titleFormat: 'yyyy LMM'
+    titleLinkFormat: '/archives/yyyy/MM/'
+    headArrows: {previous: '<span class="cal-prev"></span>', next: '<span class="cal-next"></span>'}
+    footArrows: {previous: ' ', next: ' '}
+    weekOffset: 0
+    single: false
+    root: '/calendar/'
+    url: '/calendar.json'
 ```
 
 - **menu** - Navigation menu
@@ -113,8 +133,12 @@ display_updated: true
 - **duoshuo_shortname** - Duoshuo shortname
 - **baidushare** - Show baidu share in post
 - **links** - Links displaying in sidebar
-- **about_me** - About me displaying in sidebar. The gravatar is your gravatar e-mail. You can choose gravatar or avatar to show your picture. 
+- **about_me** - About me displaying in sidebar. The gravatar is your gravatar e-mail. You can choose gravatar or avatar to show your picture.
 - **display_updated** - Display updated in article footer
+- **busuanzi** - Display PV and UV
+- **calendar** - Options of calendar widget
+    - language - See [languages.js]. Priority: theme's `_config.yml` `>` hexo's `_config.yml` `>` [calendar.js]'s default option.
+    - options - Priority of months, dayOfWeekShort, dayOfWeek, ostsMonthTip and titleFormat : theme's `_config.yml` `>` [languages.js] `>` [calendar.js]'s default option. Priority of single and root: hexo's `_config.yml` `>` theme's `_config.yml` `>` [calendar.js]'s default option. Priority of other options: theme's `_config.yml` `>` [calendar.js]'s default option.
 
 ## Features
 
@@ -166,3 +190,5 @@ All of them are enabled by default. You can edit them in `widget` setting.
 [Grunt]: http://gruntjs.com/
 [Landscape]: https://github.com/hexojs/hexo-theme-landscape
 [hexo-generator-calendar]: https://github.com/howiefh/hexo-generator-calendar
+[languages.js]:https://github.com/howiefh/hexo-theme-landscape-f/blob/master/source/js/languages.js
+[calendar.js]:https://github.com/howiefh/hexo-theme-landscape-f/blob/master/source/js/calendar.js

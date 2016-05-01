@@ -50,10 +50,16 @@
 <%- partial('gauges-analytics') %>
 
 <% if (theme.widgets.indexOf('calendar') != -1){ %>
-    <%- js('js/languages') %>
-    <%- js('js/calendar') %>
+  <%- js('js/languages') %>
+  <%- js('js/calendar') %>
 
-    <script type="text/javascript">
-    $('#calendar').aCalendar('<%= config.language %>', {single:<%= config.calendar.single %>, root:'<%= config.calendar.root %>'});
-    </script>
+  <script type="text/javascript">
+  $(function() {
+    <% if (theme.calendar.options){ %>
+    $('#calendar').aCalendar('<%= theme.calendar.language || config.language %>', $.extend(<%- JSON.stringify(theme.calendar.options) %>, {single:<%= config.calendar.single %>, root:'<%= config.calendar.root %>'}));
+    <% } else { %>
+    $('#calendar').aCalendar('<%= theme.calendar.language || config.language %>', {single:<%= config.calendar.single %>, root:'<%= config.calendar.root %>'});
+    <% } %>
+  });
+  </script>
 <% } %>
