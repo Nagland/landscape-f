@@ -14,7 +14,7 @@ $ cd <your blog path>
 $ git clone https://github.com/howiefh/hexo-theme-landscape-f.git themes/landscape-f
 ```
 
-**Landscape-F requires Hexo 2.4 and above.**
+**Landscape requires Hexo 2.4 and above.** If you would like to enable the RSS, the [hexo-generate-feed] plugin is also required.
 
 ### Enable
 
@@ -182,6 +182,7 @@ All of them are enabled by default. You can edit them in `widget` setting.
 [Fancybox]: http://fancyapps.com/fancybox/
 [Font Awesome]: http://fontawesome.io/
 [Grunt]: http://gruntjs.com/
+[hexo-generate-feed]: https://github.com/hexojs/hexo-generator-feed
 [Landscape]: https://github.com/hexojs/hexo-theme-landscape
 [hexo-generator-calendar]: https://github.com/howiefh/hexo-generator-calendar
 [languages.js]:https://github.com/howiefh/hexo-theme-landscape-f/blob/master/source/js/languages.js
