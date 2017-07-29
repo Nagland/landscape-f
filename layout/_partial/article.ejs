@@ -43,9 +43,6 @@
         <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link"><%= __('comment') %></a>
       <% } %>
 
-      <% if (post.comments && theme.duoshuo_shortname){ %>
-        <a href="<%- post.permalink %>#ds-thread" class="ds-thread-count article-comment-link" data-thread-key="<%- config.root %><%- post.path%>">暂无评论</a>
-      <% } %>
 	  <% } %>
       <%- partial('post/tag') %>
 	  <%- partial('post/date', {date_format: null, footer: true}) %>
@@ -62,14 +59,4 @@
     <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </div>
 </section>
-<% } %>
-
-<% if (!index && post.comments && theme.duoshuo_shortname){ %>
-<!-- 多说评论框 start -->
-<section id="comments">
-  <div class="ds-thread"  data-thread-key="<%- config.root %><%- page.path%>" data-title="<%= page.title %>" data-url="<%- page.permalink %>" id="ds_thread">
-    <noscript>Please enable JavaScript to view the <a href="//duoshuo.com/?ref_noscript">comments powered by duoshuo.</a></noscript>
-  </div>
-</section>
-<!-- 多说评论框 end -->
 <% } %>

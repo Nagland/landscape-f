@@ -19,7 +19,6 @@ widgets:
 - archive
 - calendar
 - recent_posts
-- duoshuo_recent_comments
 - links
 
 # display widgets at the bottom of index pages (pagination == 2)
@@ -48,9 +47,6 @@ toc:
   aside: true     ## show contents in aside.
 # Scroll to top
 go_top: true
-
-# duoshuo
-duoshuo_shortname:
 
 # baidu share
 baidushare: true

@@ -55,7 +55,6 @@ widgets:
 - archive
 - calendar
 - recent_posts
-- duoshuo_recent_comments
 - links
 
 # Miscellaneous
@@ -73,9 +72,6 @@ toc:
 
 # Scroll to top
 go_top: true
-
-# duoshuo
-duoshuo_shortname: 
 
 # baidu share
 baidushare: true
@@ -130,7 +126,6 @@ calendar:
 - **google_plus** - Google+ ID
 - **toc** - Show toc in article or sidebar
 - **go_top** - Go to top
-- **duoshuo_shortname** - Duoshuo shortname
 - **baidushare** - Show baidu share in post
 - **links** - Links displaying in sidebar
 - **about_me** - About me displaying in sidebar. The gravatar is your gravatar e-mail. You can choose gravatar or avatar to show your picture.
@@ -156,7 +151,7 @@ Landscape-F uses [Fancybox] to showcase your photos. You can use Markdown syntax
 
 You can put your sidebar in left side, right side or bottom of your site by editing `sidebar` setting.
 
-Landscape-F provides 9 built-in widgets:
+Landscape-F provides 8 built-in widgets:
 
 - category
 - tag
@@ -165,7 +160,6 @@ Landscape-F provides 9 built-in widgets:
 - recent_posts
 - about_me
 - calendar: Dates appear links if there are posts for that day when use [hexo-generator-calendar].
-- duoshuo_recent_comments
 - links
 
 All of them are enabled by default. You can edit them in `widget` setting.
