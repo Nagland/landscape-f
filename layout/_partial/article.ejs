@@ -32,6 +32,9 @@
         <%- post.content %>
       <% } %>
     </div>
+
+   
+
     <footer class="article-footer">
 	  <% if ((page.layout == 'post'|| page.layout == 'page') && theme.baidushare){ %>
 	  <!-- 百度分享 Start -->
@@ -45,7 +48,11 @@
 
 	  <% } %>
       <%- partial('post/tag') %>
-	  <%- partial('post/date', {date_format: null, footer: true}) %>
+    <%- partial('post/date', {date_format: null, footer: true}) %>
+    
+      <% if(page.comments == true) {%>
+        <%- partial('comments') %>
+      <% } %>
     </footer>
   </div>
   <% if (!index){ %>

@@ -23,6 +23,10 @@ s.setAttribute('data-timestamp', +new Date());
 <!-- 百度分享 end -->
 <% } %>
 
+<% if(page.mathjax == true) {%>
+  <%- partial('mathjax') %>
+<% } %>
+
 <%- js('js/jquery.min') %>
 
 <% if (theme.fancybox){ %>
