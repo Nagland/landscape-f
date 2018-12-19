@@ -1,5 +1,6 @@
 # Landscape-F
 
+需要预先安装作者的calendar插件
 A theme based on [Hexo]'s default theme [Landscape].
 
 - [Preview](http://howiefh.github.io/hexo-theme-landscape-f/)
